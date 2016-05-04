@@ -1,1 +1,43 @@
 <!doctype html>
+
+
+<html>
+
+<head>
+    <title>Scrum</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href="css/style.css">
+</head>
+
+<body ng-app="scrumApp">
+    <header>
+        <h1>Scrum</h1>
+    </header>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="">Login</a></li>
+                <li><a href="">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id='container'>
+        <div ng-view></div>
+    </div>
+    <!--Angular libs-->
+    <script src='libs/js/angular.min.js'></script>
+    <script src='libs/js/angular-route.min.js'></script>
+    <script src="libs/js/angular-touch.min.js"></script>
+    <script src="libs/js/angular-animate.min.js"></script>
+    <!--Angular-->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src='js/animation.js'></script>
+
+</body>
+
+</html>
