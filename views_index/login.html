@@ -1,8 +1,17 @@
-<div>
+<!--<div>
     <div>
         <ul>
             <li>Usuario:<input type="text" name="Usuario"></li>
             <li>Password:<input type="text" name="Password"></li>
         </ul>
     </div>
+</div>-->
+
+<div>
+	<h2>Inicio de sesión</h2>
+	<input type="text" ng-model="nick" placeholder="Introduzca su nick">
+	<br>
+	<input type="password" ng-model="password" placeholder="Introduzca su contraseña">
+	<br>
+	<button type="button" class="btn btn-primary" data-ng-click="iniciarSesion(nick, password)">Iniciar Sesión</button>
 </div>
