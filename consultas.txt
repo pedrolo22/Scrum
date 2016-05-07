@@ -1,0 +1,9 @@
+--------Registro---------
+
+select if(Nick = 'Nick', 'True', 'False') from team_member;
+insert into team_member values ('', 'Nombre', 'Rol', 'Nick', 'password', 'e-mail');
+
+--------Login------------
+
+select Rol, Nick, password from team_member where Nick = 'Nick' and password = 'password';
+
