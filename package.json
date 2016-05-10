@@ -1,0 +1,23 @@
+{
+  "name": "tflis",
+  "version": "1.0.0",
+  "description": "Trabajo final de Laboratorio ingenieria del software",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrolo22/Scrum.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrolo22/Scrum/issues"
+  },
+  "homepage": "https://github.com/pedrolo22/Scrum#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mysql": "^2.10.2"
+  }
+}
