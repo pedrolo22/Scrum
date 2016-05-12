@@ -1,0 +1,295 @@
+
+
+h1{
+    font-size: 100px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Sans-serif;
+  background: #2c3e50;
+   
+    
+  
+    background-image: url(../images/fondo.jpg);
+}
+
+
+header {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: orangered;
+    background-color: azure;
+        
+}
+
+
+#logo {
+    position: relative;
+   
+    height: 100px;
+}
+
+/*prueba
+#wrap {
+  margin: 0 auto 0px;
+}
+
+*/
+
+/*prueba
+#regbar {
+  height: 67px;
+  
+}
+
+*/
+
+
+#navthing {
+  margin-left: 550px;
+  margin-top: 50px;    
+}
+
+
+
+h2 {
+  padding: 20px;
+  color: #ecf0f1;
+  
+}
+
+/*prueba
+fieldset {
+  border: none;
+
+*/
+    
+   
+  
+}
+
+.login {
+  position: relative;
+  width: 50px;
+ display: none;
+      
+   
+}
+
+.regis {
+  position: relative;
+  width: 1100px;
+ display: none; 
+}
+
+/* flecha login-->ponerla bien */
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid #ECF0F1;
+  left: 13px;
+  position:relative;
+  top: -10px;
+}
+
+/*flecha regis*/
+.arrow-up2 {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid #ECF0F1;
+  left: 100px;
+  position:relative;
+  top: -10px;
+}
+
+/*posicion caja login */
+.formholder {
+  background: #ecf0f1;
+  width: 250px;
+  border-radius: 5px;
+  padding-top: 5px;
+ position: relative;  
+    left: -100px;
+
+   
+    
+    
+}
+
+/*posicion caja regis */
+.formholder2{
+ background: #ecf0f1;
+  width: 350px;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-right: 800px;    
+  position: relative;
+ left: -100px;    
+    }   
+
+/* estilos de formulario login */
+.formholder input[type="nick"], .formholder input[type="password"]  {
+  padding: 7px 5px; 
+  margin: 10px 5px;
+  width: 96%;
+  display: block;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  text-align: left;    
+}
+
+/* estilos formulario regis */
+.formholder2 input[type="email"], .formholder2 input[type="name"], .formholder2 input[type="surname"], .formholder2 input[type="nick"], .formholder2 input[type="psw"], .formholder2 input[type="rol"] {
+  padding: 7px 5px ;
+  /*margin: 10px 5px; 
+     
+ 
+ /* width: 96%; */
+  display: block;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+    text-align: left;
+}
+
+
+
+
+.formholder input[type="nick"]:focus, .formholder input[type="password"]:focus  {
+  outline: none;
+  box-shadow: 0 0 1px 1px #1abc9c;
+}
+
+
+
+.formholder2 input[type="name"]:focus, .formholder2 input[type="surname"]:focus, .formholder2 input[type="email"]:focus, .formholder2 input[type="nick"]:focus, .formholder2 input[type="psw"]:focus, .formholder2 input[type="rol"]:focus {
+  
+  outline: none;
+  box-shadow: 0 0 1px 1px #1abc9c;
+}
+
+/*boton login*/
+.formholder input[type="submit"]  {
+  background: #1abc9c;
+  padding: 7px;
+     
+  font-size: 20px;
+  display: block;
+  width: 96%;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 3px;   
+}
+
+/*boton regis*/
+.formholder2 input[type="submit"]{
+  background: #1abc9c;
+  padding: 7px;
+  position: relative;  
+  right: -250px;    /*poner bien cuando la tabla esté entera */
+  font-size: 20px;
+  display: block;
+  width: 120%;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 3px;   
+}
+
+
+.formholder input[type="submit"]:hover, .formholder2 input[type="submit"]:hover  {
+  background: #1bc6a4;
+}
+
+
+
+/*Caja de login y registro-->NO */
+
+/*
+.randompad {
+    padding: 70px 70px 70px 70px;
+    position:relative;
+*/
+/*   
+    
+}
+
+    
+.randompad2 {
+    position:relative;
+    left: -100px;
+}
+
+*/
+
+
+    
+.green {
+  color: #1abc9c;
+}
+
+
+
+a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+a:hover {
+  color: #1abc9c;
+}
+
+
+#loginform:hover {
+
+  background: #1abc9c;
+  padding: 10px;
+  font-size: 30px;
+ /* display:inline-flex; */
+  width: 12%;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#regisform:hover {
+
+  background: #1abc9c;
+  padding: 10px;
+  font-size: 30px;
+ /* display:inline-flex; */
+  width: 17%;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+.table {
+    margin-left: 5px;
+}
+
+*/

@@ -1,0 +1,117 @@
+<!doctype html>
+
+
+<html>
+
+<head>
+    <title>Scrum</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href="css/style.css">
+</head> 
+
+<body ng-app="scrumApp">
+    <header>
+        <h1>Scrum
+        <img id="logo" src="images/scrum.png" alt="logo" class="img-rounded">
+        </h1>
+        
+    </header>
+    
+    
+    
+    <div id="wrap">
+  <div id="regbar">
+    <div id="navthing">
+      <h2><a href="#" id="loginform">Login</a>  <a href="#"  id="regisform">Register</a></h2>
+    <div class="login">
+      <div class="arrow-up"></div>
+      <div class="formholder">
+        <div class="randompad">
+           <fieldset>
+             <label name="nick">Nick</label>
+             <input type="nick"  />
+             <label name="password">Password</label>
+             <input type="password" />
+             <input type="submit" value="Login" />
+ 
+           </fieldset>
+        </div>
+      </div>
+    </div>
+    
+    <div class="regis">
+      <div class="arrow-up2"></div>
+      <div class="formholder2">
+        <div class="randompad2">
+            <fieldset>       
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <td><label name="name">Firstname</label></td>
+                        <td><label name="surname">Lastname</label></td>
+                        <td><label name="email">Email</label></td>
+                        
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> <input type="name" /></td>
+                        <td><input type="surname" /></td>
+                        <td> <input type="email" value="example@example.com" /></td>
+                      </tr>
+                      <tr>
+                        <td><label name="nick">Nick</label></td>
+                        <td><label name="psw">Password</label></td>
+                        <td><label name="rol">Rol</label></td>
+                      </tr>
+                      <tr>
+                        <td> <input type="nick" /></td>
+                        <td><input type="psw" /></td>
+                        <td> <input type="rol"  /></td>
+                      </tr>
+                      
+                      <tr>
+                       <td id="reg"> <input type="submit" value="Register" /></td>
+                      </tr>
+                    
+                    </tbody>
+                    
+              </table>
+           
+            </fieldset>     
+           
+           
+           
+           
+        </div>
+      </div>
+    </div>  
+    
+    </div>
+  </div>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+
+    <div id='container'>
+        <div ng-view></div>
+    </div>
+    <!--Angular libs-->
+    <script src='libs/js/angular.min.js'></script>
+    <script src='libs/js/angular-route.min.js'></script>
+    <script src="libs/js/angular-touch.min.js"></script>
+    <script src="libs/js/angular-animate.min.js"></script>
+    <!--Angular-->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src='js/animation.js'></script>
+
+</body>
+
+</html>
