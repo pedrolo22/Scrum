@@ -30,14 +30,15 @@
       <div class="arrow-up"></div>
       <div class="formholder">
         <div class="randompad">
-           <fieldset>
-             <label name="nick">Nick</label>
-             <input type="nick" placeholder="Introduzca su nick" />
-             <label name="password">Password</label>
-             <input type="password" placeholder="Introduzca su contraseña">             
-             <input type="submit" value="Login" />
- 
-           </fieldset>
+          <form action="/login" method="get">
+               <fieldset>
+                 <label name="nick">Nick</label>
+                 <input type="nick" placeholder="Introduzca su nick" />
+                 <label name="password">Password</label>
+                 <input type="password" placeholder="Introduzca su contraseña">             
+                 <input type="submit" value="Login" />
+               </fieldset>
+            </form>
         </div>
       </div>
     </div>
@@ -46,50 +47,49 @@
       <div class="arrow-up2"></div>
       <div class="formholder2">
         <div class="randompad2">
-            <fieldset>       
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <td><label name="name">Firstname</label></td>
-                        <td><label name="surname">Lastname</label></td>
-                        <td><label name="email">Email</label></td>
-                        
-                        
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td> <input type="name" /></td>
-                        <td><input type="surname" /></td>
-                        <td> <input type="email" placeholder="example@example.com" /></td>
-                      </tr>
-                      <tr>
-                        <td><label name="nick">Nick</label></td>
-                        <td><label name="psw">Password</label></td>
-                        <td><label name="rol">Rol</label></td>
-                      </tr>
-                      <tr>
-                        <td> <input type="nick" /></td>
-                        <td><input type="password" /></td>
-                        <td><select name="rol">
-                              <option value="scrum_manager">Scrum Manager</option>
-                              <option value="developer">Developer</option>
-                            </select>
-                        </td>
-                      </tr>
-                      
-                      <tr>
-                       <td id="reg"> <input type="submit" value="Register" /></td>
-                      </tr>
-                    
-                    </tbody>
-                    
-              </table>
-           
-            </fieldset>     
-           
-           
-           
+            <form action="/register" method="post">
+                <fieldset>       
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <td><label name="name">Firstname</label></td>
+                            <td><label name="surname">Lastname</label></td>
+                            <td><label name="email">Email</label></td>
+
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td> <input type="name" /></td>
+                            <td><input type="surname" /></td>
+                            <td> <input type="email" placeholder="example@example.com" /></td>
+                          </tr>
+                          <tr>
+                            <td><label name="nick">Nick</label></td>
+                            <td><label name="psw">Password</label></td>
+                            <td><label name="rol">Rol</label></td>
+                          </tr>
+                          <tr>
+                            <td> <input type="nick" /></td>
+                            <td><input type="password" /></td>
+                            <td><select name="rol">
+                                  <option value="scrum_manager">Scrum Manager</option>
+                                  <option value="developer">Developer</option>
+                                </select>
+                            </td>
+                          </tr>
+
+                          <tr>
+                           <td id="reg"> <input type="submit" value="Register" /></td>
+                          </tr>
+
+                        </tbody>
+
+                  </table>
+
+                </fieldset>
+            </form>     
            
         </div>
       </div>
