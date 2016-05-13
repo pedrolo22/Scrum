@@ -32,9 +32,9 @@
         <div class="randompad">
            <fieldset>
              <label name="nick">Nick</label>
-             <input type="nick"  />
+             <input type="nick" placeholder="Introduzca su nick" />
              <label name="password">Password</label>
-             <input type="password" />
+             <input type="password" placeholder="Introduzca su contraseña">             
              <input type="submit" value="Login" />
  
            </fieldset>
@@ -61,7 +61,7 @@
                       <tr>
                         <td> <input type="name" /></td>
                         <td><input type="surname" /></td>
-                        <td> <input type="email" value="example@example.com" /></td>
+                        <td> <input type="email" placeholder="example@example.com" /></td>
                       </tr>
                       <tr>
                         <td><label name="nick">Nick</label></td>
@@ -70,8 +70,12 @@
                       </tr>
                       <tr>
                         <td> <input type="nick" /></td>
-                        <td><input type="psw" /></td>
-                        <td> <input type="rol"  /></td>
+                        <td><input type="password" /></td>
+                        <td><select name="rol">
+                              <option value="scrum_manager">Scrum Manager</option>
+                              <option value="developer">Developer</option>
+                            </select>
+                        </td>
                       </tr>
                       
                       <tr>
