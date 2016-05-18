@@ -2,78 +2,22 @@
 
 angular.module('scrumControllers',[])
 .controller('loginController',
-  function ($scope, $http) {
-    
-    $scope.loginIncorrecto = false;
-    $scope.registroIncorrecto = false;
+  function ($scope) {
 	  
-    $scope.login = function(nick, pssw){
+	   $scope.iniciarSesion = function(nick, password) {
+        console.log("Nick: " + nick);
+        console.log("Password: " + password)
+        var passMD5 = MD5(password);
+        console.log("Hash: " + passMD5);
         
-         var login = {
-             nick: nick,
-             pssw: MD5(pssw)
-         };
+        //Buscar si en la bbdd hay un usuario con este nick
         
-         $http.post('/login', login)
-            .success(function(data) {
-                if(data.status == "OK")
-                {
-                    //Login correcto, obtener rol
-                    $scope.loginIncorrecto = false;
-
-                    var rol = data.rol;
-                    
-                    console.log(rol);
-                    
-                    //redireccionar nueva vista nick + rol
-                    
-                }
-                else
-                {
-                    //Login incorrecto, mostrar mensaje error
-                    $scope.loginIncorrecto = true;
-                }
-                
-            })
-            .error(function(data) {
-                console.log('Error:' + data);
-            });
-     };
-    
-    $scope.registrar = function(name, surname, email, nick, pssw, rol){
+        //Comprobar que el hash de la contraseña coincida con el hash de la contraseña introducida
         
-        var registro = {
-            name: name, 
-            surname: surname,
-            email: email, 
-            nick: nick, 
-            pssw: MD5(pssw), 
-            rol: rol
-        };
+        //Obtener permiso del admin
         
-        //$http.post('/register?name=' + name + "&" + surname + "&" + email + "&" + nick + "&" + MD5(pssw) + "&" + rol)
-        $http.post('/register', registro)
-            .success(function(data) {
-                if(data.status == "OK")
-                {
-                    //Registro correcto
-                    $scope.registroIncorrecto = false;
-                    
-                    //redireccionar nueva vista nick + rol
-                    
-                }
-                else
-                {
-                    //Registro incorrecto (hay un nick similar), mostrar mensaje error
-                    $scope.registroIncorrecto = true;
-                }
-                
-            })
-            .error(function(data) {
-                console.log('Error:' + data);
-            });
+        //Redireccionar a index.html pasando nick + permisos
     };
-     
     
     var MD5 = function (string) {
 
@@ -649,12 +593,10 @@ angular.module('scrumControllers',[])
 
     return temp.toLowerCase();
 
-};
+}
     
-  });
-
-
+  })
 .controller('registerController',
     function($scope){
 
-});
+})

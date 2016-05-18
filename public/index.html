@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel='stylesheet' href="css/style.css">
+<<<<<<< HEAD
 </head> 
 
 <body ng-app="scrumApp">
@@ -30,15 +31,17 @@
       <div class="arrow-up"></div>
       <div class="formholder">
         <div class="randompad">
-          <form action="/login" method="get">
                <fieldset>
                  <label name="nick">Nick</label>
-                 <input type="nick" placeholder="Introduzca su nick" />
+                 <input type="nick" placeholder="Introduzca su nick" ng-model="nick"/>
                  <label name="password">Password</label>
-                 <input type="password" placeholder="Introduzca su contraseña">             
-                 <input type="submit" value="Login" />
+                 <input type="password" placeholder="Introduzca su contraseña" ng-model="pssw">             
+                 <button type="button" class="btn btn-primary" data-ng-click="login(nick, password)">Iniciar Sesión</button>
+
                </fieldset>
-            </form>
+        </div>
+        <div ng-if="loginIncorrecto">
+            Login incorrecto
         </div>
       </div>
     </div>
@@ -47,23 +50,20 @@
       <div class="arrow-up2"></div>
       <div class="formholder2">
         <div class="randompad2">
-            <form action="/register" method="post">
-                <fieldset>       
-                    <table class="table">
+            <fieldset>       
+                 <table class="table">
                         <thead>
                           <tr>
                             <td><label name="name">Firstname</label></td>
                             <td><label name="surname">Lastname</label></td>
                             <td><label name="email">Email</label></td>
-
-
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td> <input type="name" /></td>
-                            <td><input type="surname" /></td>
-                            <td> <input type="email" placeholder="example@example.com" /></td>
+                            <td> <input type="name" ng-model="name"/></td>
+                            <td><input type="surname" ng-model="surname"/></td>
+                            <td> <input type="email" placeholder="example@example.com" ng-model="email"/></td>
                           </tr>
                           <tr>
                             <td><label name="nick">Nick</label></td>
@@ -71,26 +71,27 @@
                             <td><label name="rol">Rol</label></td>
                           </tr>
                           <tr>
-                            <td> <input type="nick" /></td>
-                            <td><input type="password" /></td>
-                            <td><select name="rol">
+                            <td> <input type="nick" ng-model="nick"/></td>
+                            <td><input type="password" ng-model="pssw" /></td>
+                            <td><select name="rol" ng-model="rol">
                                   <option value="scrum_manager">Scrum Manager</option>
                                   <option value="developer">Developer</option>
                                 </select>
                             </td>
                           </tr>
-
                           <tr>
-                           <td id="reg"> <input type="submit" value="Register" /></td>
+                           <td id="reg">
+                            <button type="button" class="btn btn-primary" data-ng-click="registrar(name, surname,
+                            email, nick, pssw, rol)">Registrar</button>
+
+                           </td>
                           </tr>
-
-                        </tbody>
-
-                  </table>
-
-                </fieldset>
-            </form>     
-           
+                    </tbody>
+                </table>
+            </fieldset>
+        </div>
+        <div ng-if="registroIncorrecto">
+            Registro incorrecto
         </div>
       </div>
     </div>  
@@ -102,6 +103,22 @@
 
         <script src="js/index.js"></script>
 
+=======
+</head>
+
+<body ng-app="scrumApp">
+    <header>
+        <h1>Scrum</h1>
+    </header>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="">Login</a></li>
+                <li><a href="">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+>>>>>>> de0cbba15b22fca78e63df81e30b38f9469e4c63
 
     <div id='container'>
         <div ng-view></div>
