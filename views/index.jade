@@ -1,0 +1,13 @@
+extends layout
+block head
+    title SCRUM Index
+block content
+    ul
+        a(href="#/login") Login
+        a(href="#/register") Register
+        
+    div(ng-view)
+    
+block imports
+    script(src="/js/index/controllers.js")
+    script(src='/js/index/indexApp.js')

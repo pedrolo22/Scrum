@@ -1,0 +1,6 @@
+input(type="text" ng-model='registerT.username')
+input(type="password" ng-model='registerT.pass')
+input(type='text' ng-model='registerT.email')
+input(type='text' ng-model='registerT.nick')
+h3(ng-show="fail") Incorrect form
+input(type="button" ng-click='register()' value='Register')
