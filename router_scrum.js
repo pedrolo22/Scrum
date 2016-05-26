@@ -38,6 +38,19 @@ router.post('/newSprint',function(req,res){
     }
 });
 
+router.post('/pendingHistories',function(req,res){
+    if(req.session.username && req.session.rol == 1){
+        var query = ''; // FALTA POR IMPLEMENTAR
+        mysql.queryToDB(query,function(result,err){
+            if(err){
+                res.json({error:true});
+            }else{
+                res.json({error:false});
+            }
+        });
+    }
+});
+
 // GETS
 router.get('/histories',function(req,res){
     if(req.session.username)
@@ -67,7 +80,8 @@ router.get('/history',function(req,res){
         });
 });
 
-router.get('/user',function(req,res){
+//router.get('/user',function(req,res){
+router.get('/user/:userID',function(req,res){
     if(req.session.username)
         res.redirect('/');
     else

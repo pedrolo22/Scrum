@@ -20,6 +20,10 @@ angular.module("scrumApp",["ngRoute","ngAnimate","ngTouch"])
     when('/newSprint',{
         templateUrl: 'partials/masterScrum/newSprint',
         controller: newSprintMasterCtrl
+    })
+    when('/pendingHistories',{
+        templateUrl: 'partials/masterScrum/pendingHistories',
+        controller: pendingHistoriesCtrl
     }).
     otherwise({
         redirectTo: '/sprint'   
