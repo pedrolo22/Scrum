@@ -1,9 +1,40 @@
 --------Registro---------
 
-select if(Nick = 'Nick', 'True', 'False') from team_member;
 insert into team_member values ('', 'Nombre', 'Rol', 'Nick', 'password', 'e-mail');
 
 --------Login------------
 
 select Rol, Nick, password from team_member where Nick = 'Nick' and password = 'password';
+
+
+---------------------------------
+Todas las historias asociadas en estado terminada
+
+select * from user_story where Status = "Terminada"
+
+Listado de Historias de Usuario del Sprint activo (en cualquier estado).
+
+select * from user_story where id_us in (select id_us from develop where id_sprint = "//")
+
+Listado de Historias de Usuario asignadas a más de un Sprint (en cualquier estado).
+
+select * from user_story where id_us in (select distinct id_sprint from develop)
+
+Listado de Historias de Usuario asignadas a un Desarrollador concreto (en cualquier estado).
+
+select * from user_story where id_us in (select id_us from develop where id_tm = "//")
+
+Listado de Historias de Usuario pendientes. Solo el Scrum Master puede ejecutar esta
+consulta.
+
+select * from user_story where Status = "Pendiente"
+
+---------------------------------------------------
+Modificar datos de usuario
+
+update team_member set Nombre = "//", Rol = "//", Nick = "//", password  = "//", email = "//" where id_tm = "//"
+
+
+
+
 
